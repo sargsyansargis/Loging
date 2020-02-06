@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/loginScreenFragment">
+
+    <fragment
+        android:id="@+id/loginScreenFragment"
+        android:name="com.example.picsartsapi.LoginScreenFragment"
+        android:label="LoginScreenFragment" >
+        <action
+            android:id="@+id/action_loginScreenFragment_to_searchScreenFragment"
+            app:destination="@id/searchScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchScreenFragment"
+        android:name="com.example.picsartsapi.SearchScreenFragment"
+        android:label="SearchScreenFragment" >
+        <argument
+            android:name="logUser"
+            app:argType="com.example.picsartsapi.domain.DomainUser" />
+    </fragment>
+</navigation>
